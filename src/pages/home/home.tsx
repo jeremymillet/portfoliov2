@@ -14,9 +14,16 @@ function Home() {
                 <GradientBackground />
                 <div className="hero">
                     <h1>Jérémy MILLET</h1>
-                    <h2>Concepteur développeur d'application web.</h2>
+                    <h2 className="subtitle">Concepteur développeur d'application web.</h2>
                 </div>
                 <Mouse/>
+            </div>
+            <div className='background-overlay'></div>
+            <div id="expertise">
+
+            </div>
+            <div id="work">
+
             </div>
         </div>
     )
