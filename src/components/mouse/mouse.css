@@ -1,0 +1,280 @@
+:root {
+    --color-bg: #222a30;
+    --color-outline: #ffffff;
+    --color-outline-fade: #4e5559;
+    --width-mouse: 52px;
+    --height-mouse: 88px;
+    --border-mouse: 6px;
+    --pos-mouse: 8px;
+    --pos-text: 2px;
+    --size-trackball: 10px;
+    --pos-trackball: 20px;
+    --shrink-trackball: 0.4;
+    --anim-duration: 5s;
+}
+
+
+.mouse {
+    left: 50%;
+    position: relative;
+    width: var(--width-mouse);
+    height: var(--height-mouse);
+    border-radius: 100px;
+    background: var(--color-outline-fade) linear-gradient(transparent 0%,
+            transparent 50%,
+            var(--color-outline) 50%,
+            var(--color-outline) 100%);
+    background-size: 100% 200%;
+    animation: colorSlide var(--anim-duration) linear infinite,
+        nudgeMouse var(--anim-duration) ease-out infinite;
+}
+
+.mouse::before,
+.mouse::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.mouse::before {
+    width: calc(var(--width-mouse) - var(--border-mouse));
+    height: calc(var(--height-mouse) - var(--border-mouse));
+    background-color: var(--color-bg);
+    border-radius: 100px;
+}
+
+.mouse::after {
+    background-color: var(--color-outline);
+    width: var(--size-trackball);
+    height: var(--size-trackball);
+    border-radius: 50%;
+    animation: trackBallSlide var(--anim-duration) linear infinite;
+}
+
+@keyframes colorSlide {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    20% {
+        background-position: 0% 0%;
+    }
+
+    21% {
+        background-color: var(--color-outline-fade);
+    }
+
+    29.99% {
+        background-color: var(--color-outline);
+        background-position: 0% 0%;
+    }
+
+    30% {
+        background-color: var(--color-outline-fade);
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 0% 0%;
+    }
+
+    51% {
+        background-color: var(--color-outline-fade);
+    }
+
+    59% {
+        background-color: var(--color-outline);
+        background-position: 0% 0%;
+    }
+
+    60% {
+        background-color: var(--color-outline-fade);
+        background-position: 0% 100%;
+    }
+
+    80% {
+        background-position: 0% 0%;
+    }
+
+    81% {
+        background-color: var(--color-outline-fade);
+    }
+
+    90%,
+    100% {
+        background-color: var(--color-outline);
+    }
+}
+
+@keyframes trackBallSlide {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(calc(-1 * var(--pos-trackball)));
+    }
+
+    6% {
+        opacity: 1;
+        transform: scale(0.9) translateY(calc(var(--pos-trackball) / 4));
+    }
+
+    14% {
+        opacity: 0;
+        transform: scale(var(--shrink-trackball)) translateY(calc(var(--pos-trackball) * 2));
+    }
+
+    15%,
+    19% {
+        opacity: 0;
+        transform: scale(var(--shrink-trackball)) translateY(calc(-1 * var(--pos-trackball)));
+    }
+
+    28%,
+    29.99% {
+        opacity: 1;
+        transform: scale(1) translateY(calc(-1 * var(--pos-trackball)));
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1) translateY(calc(-1 * var(--pos-trackball)));
+    }
+
+    36% {
+        opacity: 1;
+        transform: scale(0.9) translateY(calc(var(--pos-trackball) / 4));
+    }
+
+    44% {
+        opacity: 0;
+        transform: scale(var(--shrink-trackball)) translateY(calc(var(--pos-trackball) * 2));
+    }
+
+    45%,
+    49% {
+        opacity: 0;
+        transform: scale(var(--shrink-trackball)) translateY(calc(-1 * var(--pos-trackball)));
+    }
+
+    58%,
+    59.99% {
+        opacity: 1;
+        transform: scale(1) translateY(calc(-1 * var(--pos-trackball)));
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1) translateY(calc(-1 * var(--pos-trackball)));
+    }
+
+    66% {
+        opacity: 1;
+        transform: scale(0.9) translateY(calc(var(--pos-trackball) / 4));
+    }
+
+    74% {
+        opacity: 0;
+        transform: scale(var(--shrink-trackball)) translateY(calc(var(--pos-trackball) * 2));
+    }
+
+    75%,
+    79% {
+        opacity: 0;
+        transform: scale(var(--shrink-trackball)) translateY(calc(-1 * var(--pos-trackball)));
+    }
+
+    88%,
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(calc(-1 * var(--pos-trackball)));
+    }
+}
+
+@keyframes nudgeMouse {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(var(--pos-mouse));
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(var(--pos-mouse));
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(var(--pos-mouse));
+    }
+
+    90% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes nudgeText {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(var(--pos-text));
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(var(--pos-text));
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(var(--pos-text));
+    }
+
+    90% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorText {
+    21% {
+        color: var(--color-outline-fade);
+    }
+
+    30% {
+        color: var(--color-outline);
+    }
+
+    51% {
+        color: var(--color-outline-fade);
+    }
+
+    60% {
+        color: var(--color-outline);
+    }
+
+    81% {
+        color: var(--color-outline-fade);
+    }
+
+    90% {
+        color: var(--color-outline);
+    }
+}
