@@ -1,24 +1,24 @@
 import { useEffect } from 'react';
 import './background.css'
 
-const GradientBackground = () => {
+const GradientBackground = ({ isFixed }: { isFixed: boolean }) => {
     useEffect(() => {
-    const interBubble = document.querySelector('.interactive');
+    const interBubble = document.querySelector('.interactive') as HTMLElement;
     let curX = 0;
     let curY = 0;
     let tgX = 0;
     let tgY = 0;
 
     const move = () => {
-      curX += (tgX - curX) / 20;
-      curY += (tgY - curY) / 20;
+      curX += (tgX - curX) / 15;  // Diminuez la valeur pour un mouvement plus fluide
+      curY += (tgY - curY) / 15;  
       if (interBubble) {
-        interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`; // Utilisation de 'style' après le cast
       }
       requestAnimationFrame(move);
     };
 
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event:MouseEvent) => {
       tgX = event.clientX;
       tgY = event.clientY;
     };
@@ -32,7 +32,7 @@ const GradientBackground = () => {
     };
   }, []);
   return (
-    <div className="gradient-bg">
+    <div className={`gradient-bg ${isFixed ? 'fixed' : ''}`}>
       <svg
         viewBox="0 0 100vw 100vw"
         xmlns="http://www.w3.org/2000/svg"

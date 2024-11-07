@@ -14,6 +14,7 @@ header.fixed {
     left: 0;
     width: 100%;
     z-index: 10;
+    animation: slideDown 0.5s ease-out forwards;
 }
 header.fixed .logo {
     display: none;
@@ -101,5 +102,16 @@ li p {
         top: 40%;
         display: flex;
         align-items: center;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        top: -100px;
+        /* Ou toute autre valeur pour simuler la sortie du header */
+    }
+
+    100% {
+        top: 0;
     }
 }

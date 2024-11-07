@@ -1,3 +1,4 @@
+import { useState } from "react"
 import GradientBackground from "../../components/background/background"
 import Cursor from "../../components/cursor/cursor"
 import Header from "../../components/header/header"
@@ -6,19 +7,18 @@ import './home.css'
 
 
 function Home() {
+    const [isFixed, setIsFixed] = useState<boolean>(false);
     return (
         <div>
             <Cursor />
-            <div>
-                <Header />
-                <GradientBackground />
-                <div className="hero">
-                    <h1>Jérémy MILLET</h1>
-                    <h2 className="subtitle">Concepteur développeur d'application web.</h2>
-                </div>
-                <Mouse/>
+            <Header setIsFixed={setIsFixed} isFixed={isFixed} />
+            <GradientBackground isFixed={isFixed}/>
+            <div className="hero">
+                <h1>Jérémy MILLET</h1>
+                <h2 className="subtitle">Concepteur développeur d'application web.</h2>
             </div>
-            <div className='background-overlay'></div>
+            <Mouse/>
+            <div className={`background-overlay ${isFixed ? 'fixed' : ''}`}></div>
             <div id="expertise">
                 <h2>My Expertise</h2>
             </div>
