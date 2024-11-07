@@ -8,26 +8,27 @@
 .cursor--small {
     width: 5px;
     height: 5px;
-    left: -2.5px;
-    top: -2.5px;
     border-radius: 50%;
-    z-index: 11000;
     background: #66d9ed;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    /* Centre le curseur autour de la position */
+    transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
 }
-.cursor--hover.cursor--small{
+
+.cursor--hover.cursor--small {
     width: 20px;
     height: 20px;
-    left: -10px;
-    top: -10px;
-    border-radius: 50%;
-    z-index: 11000;
-    background: #66d9ed;
-    opacity: 40%;
-    
+    background: rgba(102, 217, 237, 0.4);
+    /* Couleur et opacité ajustées pour le hover */
 }
 
 .cursor--canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 12000;
+    pointer-events: none;
 }

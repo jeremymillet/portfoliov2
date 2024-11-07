@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react';
 import './header.css'
 
 function Header() {
+    const [isFixed, setIsFixed] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+        if (window.scrollY > window.innerHeight * 0.5) {  // 50% de la hauteur de la fenêtre
+            setIsFixed(true);
+        } else {
+            setIsFixed(false);
+        }
+        };
+    window.addEventListener('scroll', handleScroll);
+    // Nettoyage de l'événement au démontage du composant
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
     return (
-        <header>
+        <header className={`${isFixed ? 'fixed' : ''}`}>
             <div className='logo'>
                 <p>JérémyMillet</p>
                 <span>.</span>

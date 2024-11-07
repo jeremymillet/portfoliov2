@@ -20,7 +20,7 @@ function Home() {
             </div>
             <div className='background-overlay'></div>
             <div id="expertise">
-
+                <h2>My Expertise</h2>
             </div>
             <div id="work">
 

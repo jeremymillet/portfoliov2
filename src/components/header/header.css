@@ -5,6 +5,22 @@ header{
     display: flex;
     position: relative;
 }
+
+header.fixed {
+    height: 60px;
+    background: rgba(26, 26, 26, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+header.fixed .logo {
+    display: none;
+}
+header.fixed nav ul li span,header.fixed nav ul li p{
+    color: #66d9ed;
+}
 .logo{
     font-family: "Roboto Mono";
     font-weight: 500;
@@ -22,6 +38,7 @@ header{
     color:#b989e8;
 }
 nav{
+    visibility: visible !important;
     font-size: 18px;
     font-weight: 500;
     font-family: "Roboto Mono";
@@ -33,7 +50,7 @@ nav{
 }
 ul{
     display: flex;
-    width: 30%;
+    width: 700px;
     justify-content: space-around;
     align-items: center;
 }
@@ -47,3 +64,42 @@ li p {
     font-size: 10px;
 }
 
+
+@media (max-width: 1400px) {
+    
+    ul {
+        width: 500px
+        
+    }
+    .logo {
+        font-weight: 500;
+        font-size: 20px;
+        color: #66d9ed;
+        position: absolute;
+        top: 40%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1025px) {
+
+    ul {
+        width: 100%;
+        justify-content: end;
+    }
+    header.fixed ul{
+        justify-content: center;
+    }
+   
+
+    .logo {
+        font-weight: 500;
+        font-size: 20px;
+        color: #66d9ed;
+        position: absolute;
+        top: 40%;
+        display: flex;
+        align-items: center;
+    }
+}
