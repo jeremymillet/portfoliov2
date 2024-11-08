@@ -6,6 +6,7 @@
 }
 
 .cursor--small {
+    z-index: 100000;
     width: 5px;
     height: 5px;
     border-radius: 50%;

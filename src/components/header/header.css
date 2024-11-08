@@ -72,6 +72,10 @@ li p {
         width: 500px
         
     }
+    header.fixed ul {
+        width: 700px;
+        justify-content: space-around;
+    }
     .logo {
         font-weight: 500;
         font-size: 20px;
@@ -89,11 +93,6 @@ li p {
         width: 100%;
         justify-content: end;
     }
-    header.fixed ul{
-        justify-content: center;
-    }
-   
-
     .logo {
         font-weight: 500;
         font-size: 20px;
