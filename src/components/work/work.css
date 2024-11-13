@@ -1,13 +1,19 @@
-#expertise {
+#work {
     width: 100%;
-    padding: 10% 3% 0% 3%;
+    padding-top: 20%
+}
+
+#work {
+    width: 100%;
+    padding: 0% 3% 0% 3%;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#expertise h2 {
+#work h2 {
     opacity: 0;
     font-size: 75px;
     font-weight: 700;
@@ -15,10 +21,11 @@
     margin-bottom: 50px;
 }
 
-
-.expertises-container {
+.card-container {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    width: 100%;
-    padding: 0% 10%;
+    flex-wrap: wrap;
+    gap: 40px;
+
 }
