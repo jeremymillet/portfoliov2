@@ -22,11 +22,9 @@ a {
   font-weight: 500;
   color: white;
   text-decoration: inherit;
-  cursor:none;
 }
 a:hover {
   color: #66d9ed;
-  cursor: none;
 }
 
 body {

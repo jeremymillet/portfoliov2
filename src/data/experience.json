@@ -1,0 +1,32 @@
+[
+    {   
+        "id":1,
+        "title":"Concepteur D'application Web",
+        "date":"2023 -2024",
+        "localisation": "Remote (Tours,France)",
+        "description":"",
+        "technology": [
+            "React",
+            "JavaScript",
+            "Node.js",
+            "Redux",
+            "SQL"
+        ]
+
+    },
+    {   
+        "id":2,
+        "title":"Web Developer",
+        "date":"2022 -2023",
+        "localisation": "Remote (Tours,France)",
+        "description":"",
+        "technology": [
+            "SCSS",
+            "JavaScript",
+            "Node.js",
+            "Mongodb",
+            "Express.js"
+        ]
+
+    }
+]

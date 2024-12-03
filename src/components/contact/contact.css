@@ -1,0 +1,83 @@
+.contact-container {
+    background-color: black;
+    margin-top:80px;
+    padding: 0px 0px;
+    display: flex;
+}
+
+.contact{
+    width: 50%;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+}
+.contact h2 {
+    margin-bottom: 30px;
+    font-size: 38px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact p {
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.avis-container{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-family: "Poppins", serif;
+}
+
+.avis{
+    padding: 10px 20px;
+    width: 70%;
+    height: 100%;
+    background-color: #923fe6;
+}
+
+.avis {
+    padding: 30px 30px;
+    width: 50%;
+    height: 100%;
+    background-color: #923fe6;
+}
+.avis-text{
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.avis-info .name{
+    font-weight: bold;
+    font-size: 18px;
+}
+.avis-info {
+    font-size: 15px;
+}
+.avis-img-container{
+    display: flex;
+    justify-content: space-between;
+}
+.avis-img-container .quotes {
+    width: 40px;
+    height: 30px;
+    opacity: 0.65;
+}
+.avis-img-container .profil{
+    width: 25%;
+    border-radius: 50%;
+    border: solid 3px white;
+    opacity: 1;
+}

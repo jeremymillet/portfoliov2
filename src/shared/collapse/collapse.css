@@ -1,0 +1,118 @@
+.collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+  background-color: #740cdc;
+}
+.collapse h3{
+  font-size: 16px;
+  font-family: "Poppins", serif;
+}
+
+.collapse .collapse-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  border-radius: 5px; 
+  padding: 10px 18px 10px 15px;
+  cursor: pointer;
+}
+.right-part{
+  display: flex;
+  font-size: 16px;
+  font-family: "Poppins", serif;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.right-part p {
+  font-size: 16px;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+}
+.collapse-img {
+  transition: transform 0.5s linear;
+}
+
+.collapse-description {
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 0px;
+  max-height: 0px;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  background-color: #1a191d;
+}
+.collapse-description .text {
+  display: none;
+}
+
+
+.collapse-description.show .text .localisation{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #9b9b9c;
+  font-weight: 500;
+  font-size: 15px;
+}
+.icon{
+  color: #b7f;
+  margin-right: 5px;
+}
+.technology-container{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 15px;
+}
+.collapse-description.show .text{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  animation: collapseAnimation 0.5s;
+  border-radius: 5px;
+  background-color: #241d41;
+}
+
+.collapse .show {
+  height: auto;
+  min-height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.down {
+  transform: rotate(-180deg);
+  transition: transform 250ms linear;
+}
+@media (max-width: 800px) {
+  .collapse {
+    width: 90%;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .collapse-title {
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px 18px 10px 15px;
+  }
+}
+
+
+@keyframes collapseAnimation {
+  from {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

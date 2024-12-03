@@ -1,11 +1,12 @@
 import { useState } from "react"
 import GradientBackground from "../../components/background/background"
-import Cursor from "../../components/cursor/cursor"
 import Header from "../../components/header/header"
-import Mouse from "../../components/mouse/mouse"
+import Mouse from "../../shared/mouse/mouse"
 import './home.css'
 import ExpertiseComponant from "../../components/expertise/expertise"
 import Work from "../../components/work/work"
+import Experience from "../../components/experience/experience"
+import Contact from "../../components/contact/contact"
 
 
 function Home() {
@@ -13,7 +14,7 @@ function Home() {
     
     return (
         <div>
-            <Cursor />
+            
             <Header setIsFixed={setIsFixed} isFixed={isFixed} />
             <GradientBackground isFixed={isFixed}/>
             <div className="hero">
@@ -23,7 +24,9 @@ function Home() {
             <Mouse/>
             <div className={`background-overlay ${isFixed ? 'fixed' : ''}`}></div>
             <ExpertiseComponant />
-            <Work/>
+            <Work />
+            <Experience />
+            <Contact/>
         </div>
     );
 }
