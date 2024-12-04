@@ -31,13 +31,11 @@ function ExpertiseComponant() {
                 <h2 ref={expertiseTitleRef}>My Expertise</h2>
                 <div className="expertises-container ">
                 <Expertise
-                        id={1}
                         title={"Frontend dev React,Vue"}
                         description="Passionate about dev over 3 years of development experience in SCSS, JS, REACT, VUE frameworks"
                         img={reactLogo}
                     />
                 <Expertise
-                        id={2}
                         title={"Backend Dev node,express"}
                         description={"Skilled in backend create api and database with MySQL,mongoose,express.js frameworks"}
                         img={backendLogo}

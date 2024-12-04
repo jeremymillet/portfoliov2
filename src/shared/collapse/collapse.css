@@ -35,14 +35,19 @@
 .collapse-img {
   transition: transform 0.5s linear;
 }
+.collapse-animation-1 {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
 
 .collapse-description {
   align-items: center;
   overflow: hidden;
-  padding: 10px 0px;
+  padding: 10px 0px 0px 0px;
   max-height: 0px;
   transition: all 0.5s cubic-bezier(0, 1, 0, 1);
   background-color: #1a191d;
+  border: none;
 }
 .collapse-description .text {
   display: none;
@@ -52,7 +57,6 @@
 .collapse-description.show .text .localisation{
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
   color: #9b9b9c;
   font-weight: 500;
   font-size: 15px;
@@ -68,15 +72,47 @@
   margin-top: 15px;
   font-size: 15px;
 }
+.experience-description-container {
+  display: flex;
+  align-items: center;
+
+}
+.collapse-text-img{
+  width: 15%;
+}
+.collapse-text{
+  width: 85%;
+}
+.collapse-text-img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.experience-description-container p {
+  width: 85%;
+
+}
+
+.localisation a {
+  margin-left: 20px;
+  color: #9b9b9c;
+  font-weight: 500;
+  font-size: 15px;
+}
 .collapse-description.show .text{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   overflow: hidden;
   padding: 20px;
   position: relative;
   animation: collapseAnimation 0.5s;
   border-radius: 5px;
   background-color: #241d41;
+}
+.collapse-description.hidden .text {
+  animation: collapseAnimationBack 0.5s;
+  display: flex;
 }
 
 .collapse .show {
@@ -96,11 +132,47 @@
     font-size: 13px;
     margin-bottom: 20px;
   }
-
+  .collapse h3{
+    font-size: 14px;
+    width: 360px;
+  }
+  .right-part p {
+    font-size: 14px;
+    width: 100px;
+  }
   .collapse-title {
     height: 30px;
     border-radius: 10px;
     padding: 10px 18px 10px 15px;
+  }
+  .technology-container {
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+  .collapse-text-img img {
+    width: 60px;
+    height: 60px;
+  }
+  .collapse-description.show .text .localisation {
+    font-size: 12px;
+  }
+  .localisation a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 450px) {
+  .right-part p {
+    display: none;
+  }
+  .collapse-description.show .text{
+    flex-direction: column-reverse;
+  }
+  .collapse-text-img img{
+    height: 40px;
+    
+  }
+  .collapse-text{
+    width: 100%;
   }
 }
 
@@ -114,5 +186,17 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@keyframes collapseAnimationBack {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-150px);
+    
   }
 }

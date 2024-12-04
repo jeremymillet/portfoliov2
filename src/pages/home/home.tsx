@@ -21,7 +21,9 @@ function Home() {
                 <h1>Jérémy MILLET</h1>
                 <h2 className="subtitle">Concepteur développeur d'application web.</h2>
             </div>
-            <Mouse/>
+            <div className="mouse-container">
+                <Mouse/>
+            </div>
             <div className={`background-overlay ${isFixed ? 'fixed' : ''}`}></div>
             <ExpertiseComponant />
             <Work />

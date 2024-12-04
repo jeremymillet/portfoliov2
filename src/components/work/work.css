@@ -29,3 +29,19 @@
     gap: 40px;
 
 }
+
+
+@media (max-width: 800px) {
+    #work h2 {
+        font-size: 60px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 600px) {
+    #work h2 {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 700;
+    }
+}

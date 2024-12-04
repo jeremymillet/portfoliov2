@@ -23,3 +23,19 @@
     width: 100%;
     
 }
+
+@media (max-width: 800px) {
+    #experience h2 {
+        font-size: 60px;
+        font-weight: 700;
+    }
+
+}
+@media (max-width: 600px) {
+    #experience h2 {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+}

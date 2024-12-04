@@ -6,11 +6,10 @@ type expertiseTypeProps = {
     title: string;
     description: string;
     img: string;
-    id:number;
 }
 
 
-const Expertise: React.FC<expertiseTypeProps> = ({ id,title, description, img }) => {
+const Expertise: React.FC<expertiseTypeProps> = ({title, description, img }) => {
     const expertiseRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -18,17 +17,10 @@ const Expertise: React.FC<expertiseTypeProps> = ({ id,title, description, img })
             if (expertiseRef.current) {
                 const expertiseRect = expertiseRef.current.getBoundingClientRect();
                 if (expertiseRect.top < window.innerHeight && expertiseRect.bottom > 0) {
-                    if (id === 1) {
-                        expertiseRef.current.classList.add('expertise-animation-1');
-                    }
-                    else if (id === 2) {
-                        expertiseRef.current.classList.add('expertise-animation-2');
-                    }
-
+                    expertiseRef.current.classList.add('expertise-animation-1');
                 }
             }
         };
-
         window.addEventListener('scroll', handleScroll);
         handleScroll(); // Check initial visibility
 

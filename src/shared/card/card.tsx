@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import './card.css'
 
 type cardPropsType = {
@@ -8,9 +9,27 @@ type cardPropsType = {
 }
 
 
-const Card: React.FC<cardPropsType> = ({cover,title,category,id}) => {
+const Card: React.FC<cardPropsType> = ({ cover, title, category, id }) => {
+
+    const cardRef = useRef<HTMLDivElement | null>(null);
+     useEffect(() => {
+        const handleScroll = () => {
+            if (cardRef.current) {
+                const expertiseRect = cardRef.current.getBoundingClientRect();
+                if (expertiseRect.top < window.innerHeight && expertiseRect.bottom > 0) {
+                    cardRef.current.classList.add('card-animation-1');
+                }
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Check initial visibility
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
-        <div className="card">
+        <div className="card" ref={cardRef}>
             <div className="card-img-container">
                 <a href={`test/${id}`}>
                     <img src={cover} alt="" />

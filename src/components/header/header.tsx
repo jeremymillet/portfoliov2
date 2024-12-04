@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect} from 'react';
+import { Dispatch, SetStateAction, useEffect, useState} from 'react';
 import './header.css'
 
 type HeaderProps = {
@@ -7,6 +7,10 @@ type HeaderProps = {
 };
 
 function Header({ setIsFixed, isFixed }: HeaderProps) {
+  const [isBurger,setIsBurger] = useState(false)
+  function toogle() {
+    setIsBurger(!isBurger)
+  }
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight * 0.5) {
@@ -21,7 +25,37 @@ function Header({ setIsFixed, isFixed }: HeaderProps) {
   }, [setIsFixed]);
 
   return (
-    <header className={`${isFixed ? 'fixed' : ''}`}>
+    <header className={`${isFixed ? 'fixed' : ''} ${isBurger? "header-burger": ""}`}>
+      <div className='burger'>
+        <i className={`${isBurger? '' :"visible"}open-burger-btn fa-solid fa-bars`}onClick={toogle}></i>
+        <div className={`${isBurger ? 'visible' : 'hidden'} menu-burger`}>
+          <i className="fa-solid fa-xmark fa-lg menu-burger-close" onClick={toogle}></i>
+          <nav className="burger-nav">
+            <ul>
+              <li>
+                <a href="#">
+                  <span>// home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#expertise">
+                  <span>// expertise</span>
+                </a>
+              </li>
+              <li>
+                <a href="#work">
+                  <span>// work</span>
+                </a>
+              </li>
+              <li>
+                <a href="#experience">
+                  <span>// experience</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <div className="logo">
         <p>JérémyMillet</p>
         <span>.</span>
@@ -48,7 +82,7 @@ function Header({ setIsFixed, isFixed }: HeaderProps) {
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#experience">
               <p>04</p>
               <span>// experience</span>
             </a>

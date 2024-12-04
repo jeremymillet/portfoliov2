@@ -16,19 +16,7 @@
     margin-bottom: 30px;
     
 }
-@keyframes slideUp {
-    0% {
-        opacity: 0%;
-        transform: translateY(100px);
-        /* Commence en bas */
-    }
 
-    100% {
-        opacity: 100%;
-        transform: translateY(0);
-        /* Finie à la position normale */
-    }
-}
 .subtitle{
     text-align: center;
     text-transform: uppercase;
@@ -66,6 +54,11 @@
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
+.mouse-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 @keyframes slideUp {
     0% {
@@ -89,5 +82,28 @@
     100% {
         opacity: 1;
         transform: none;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .hero h1{
+        font-size:80px ;
+    }
+        .hero .subtitle{
+            font-size: 20px;
+        }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero .subtitle {
+        font-size: 14px;
+    }
+    .hero{
+        margin-bottom: 50px;
     }
 }

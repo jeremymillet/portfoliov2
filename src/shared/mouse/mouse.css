@@ -17,8 +17,6 @@
 .mouse {
     margin-bottom: 60px;
     opacity: 0%;
-    left: 50%;
-    position: relative;
     width: var(--width-mouse);
     height: var(--height-mouse);
     border-radius: 100px;
@@ -153,4 +151,23 @@
         transform: translateY(0px);
         /* Finie à la position normale */
     }
+}
+
+@media (max-width: 600px) {
+    :root {
+            --color-bg: #222a30;
+            --color-outline: #ffffff;
+            --color-outline-fade: #4e5559;
+            --width-mouse: 40px;
+            --height-mouse: 70px;
+            --border-mouse: 4px;
+            --pos-mouse: 8px;
+            --pos-text: 2px;
+            --size-trackball: 10px;
+            --pos-trackball: 20px;
+            --shrink-trackball: 0.4;
+            --anim-duration: 5s;
+        }
+    
+
 }
