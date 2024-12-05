@@ -29,20 +29,21 @@ const Card: React.FC<cardPropsType> = ({ cover, title, category, id }) => {
         };
     }, []);
     return (
-        <div className="card" ref={cardRef}>
+        <a className='card-link' href={`project/${id}`}>
+            <div className="card" ref={cardRef}>
             <div className="card-img-container">
-                <a href={`test/${id}`}>
-                    <img src={cover} alt="" />
-                </a>
+                <img src={cover} alt="" />
             </div>
             <div className="card-text-container">
                 <h3>{title}</h3>
                 <p>{category}</p>
-                <a className='card-link' href={`test/${id}`}>
+                <a className='card-link' href={`project/${id}`}>
                     Show Project 
                 </a>
             </div>
         </div>
+        </a>
+        
     )
 }
 export default Card

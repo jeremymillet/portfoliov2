@@ -46,7 +46,9 @@
     color: #9b9b9c;
     
 }
-
+.card-link h3{
+    color: white;
+}
 .card .card-text-container .card-link{
     font-size: 15px;
     font-weight: 600;

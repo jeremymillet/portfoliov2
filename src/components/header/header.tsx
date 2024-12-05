@@ -33,22 +33,22 @@ function Header({ setIsFixed, isFixed }: HeaderProps) {
           <nav className="burger-nav">
             <ul>
               <li>
-                <a href="#">
+                <a href="/#">
                   <span>// home</span>
                 </a>
               </li>
               <li>
-                <a href="#expertise">
+                <a href="/#expertise">
                   <span>// expertise</span>
                 </a>
               </li>
               <li>
-                <a href="#work">
+                <a href="/#work">
                   <span>// work</span>
                 </a>
               </li>
               <li>
-                <a href="#experience">
+                <a href="/#experience">
                   <span>// experience</span>
                 </a>
               </li>
@@ -64,25 +64,25 @@ function Header({ setIsFixed, isFixed }: HeaderProps) {
       <nav className="nav">
         <ul>
           <li>
-            <a href="#">
+            <a href="/#">
               <p>01</p>
               <span>// home</span>
             </a>
           </li>
           <li>
-            <a href="#expertise">
+            <a href="/#expertise">
               <p>02</p>
               <span>// expertise</span>
             </a>
           </li>
           <li>
-            <a href="#work">
+            <a href="/#work">
               <p>03</p>
               <span>// work</span>
             </a>
           </li>
           <li>
-            <a href="#experience">
+            <a href="/#experience">
               <p>04</p>
               <span>// experience</span>
             </a>

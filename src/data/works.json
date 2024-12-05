@@ -4,7 +4,9 @@
         "title":"Kasa",
         "category":"Web Development",
         "cover":"../../src/assets/cover-kasa.png",
+        "description":"dqzsddqzuhdfoiqndoiqNOIDnqOId,qOIdnqOInfqoiNfoqNfojuqnfojquNFojuNFoqfnqoFNqoNFoqnfosnfoQZNOFNFoqNFOJQZNFoqnOFnqOJFnqoJNFojqFNOJnfoqNFJOQFN ojfnzqONfoqfnozqN",
         "img":[],
+        "technology":"React,Typescript,SCSS",
         "link":"https://kasa-ts.onrender.com"
         
     },
@@ -12,6 +14,8 @@
         "id":2,
         "title":"Les petits plats",
         "category":"Web Development",
+        "description":"",
+        "technology":"",
         "cover":"../../src/assets/cover-les-petits-plats.png",
         "img":[]
         
@@ -20,14 +24,18 @@
         "id":3,
         "title":"Sportsee",
         "category":"Web Development",
+        "description":"",
+        "technology":"",
         "cover":"../../src/assets/cover-sportsee.png",
-        "img":[]
+        "img":["",""]
         
     },
     {   
         "id":4,
         "title":"WealthHealth",
         "category":"Web Development",
+        "description":"",
+        "technology":"",
         "cover":"../../src/assets/cover-wealthHealth.png",
         "img":[]
         

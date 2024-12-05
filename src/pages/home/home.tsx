@@ -14,7 +14,6 @@ function Home() {
     
     return (
         <div>
-            
             <Header setIsFixed={setIsFixed} isFixed={isFixed} />
             <GradientBackground isFixed={isFixed}/>
             <div className="hero">
