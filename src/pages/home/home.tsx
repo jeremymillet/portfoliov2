@@ -9,9 +9,9 @@ import Experience from "../../components/experience/experience"
 import Contact from "../../components/contact/contact"
 
 
+
 function Home() {
     const [isFixed, setIsFixed] = useState<boolean>(false);
-    
     return (
         <div>
             <Header setIsFixed={setIsFixed} isFixed={isFixed} />

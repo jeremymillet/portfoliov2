@@ -3,8 +3,11 @@ import './project.css'
 import Header from '../../components/header/header';
 import { useNavigate, useParams } from 'react-router-dom';
 import projects from '../../data/works.json';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store';
 
 function Project() {
+    const isEnglish = useSelector((state: RootState) => state.isEnglish);
     const paramsId = useParams<{ id: string }>();
     const [isFixed, setIsFixed] = useState<boolean>(false);
     const navigate = useNavigate();
@@ -23,7 +26,7 @@ function Project() {
             </div>
             <div className='project-description-part-container'>
                 <div className='project-description-container'>
-                    <p>{currentProject?.description}</p>
+                    <p>{isEnglish?currentProject?.descriptionEng:currentProject?.descriptionFr}</p>
                 </div>
                 <div className='project-technologies-link-part'>
                     <div className='project-technologies-container'>
@@ -32,6 +35,8 @@ function Project() {
                     </div>
                     <div className='project-link-container'>
                         <a className='project-link' href={currentProject?.link}>Open Project</a>
+                        {currentProject?.githubFront ? <a className='project-link' href={currentProject?.githubFront }>Github Front </a>:""}
+                        {currentProject?.githubBack ? <a className='project-link' href={currentProject?.githubBack}>Github Back</a>:""}
                     </div>
                 </div>
             </div>

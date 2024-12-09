@@ -2,9 +2,12 @@ import Card from "../../shared/card/card"
 import data from "../../data/works.json"
 import { useEffect, useRef } from "react";
 import './work.css'
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 function Work() {
     const workRef = useRef<HTMLDivElement | null>(null);
+    const isEnglish = useSelector((state: RootState) => state.isEnglish);
 
 
      useEffect(() => {
@@ -27,11 +30,11 @@ function Work() {
 
     return (
         <div id="work">
-            <h2 ref={workRef}>My Work</h2>
+            <h2 ref={workRef}>{isEnglish?"My Work":"Mes Projets"}</h2>
             <div className="card-container">
                 {data.map((e) => {
                     return (
-                        <Card cover={e.cover} title={e.title} category={e.category} id={e.id} key={e.id} />
+                        <Card cover={e.cover} title={e.title} category={e.category} id={e.id} key={e.id}  />
                     )
                 })}
             </div>

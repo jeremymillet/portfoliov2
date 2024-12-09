@@ -3,10 +3,13 @@ import TechnoInfo from "../../shared/technoInfo/technoInfo"
 import './experience.css'
 import data from "../../data/experience.json"
 import { useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 
 function Experience() {
-     const experienceTitleRef = useRef<HTMLDivElement | null>(null);
+    const experienceTitleRef = useRef<HTMLDivElement | null>(null);
+    const isEnglish = useSelector((state: RootState) => state.isEnglish);
     
     
     useEffect(() => {
@@ -42,12 +45,12 @@ function Experience() {
                                         <a href={experience.link}>OpenClassRooms</a>
                                     </div>
                                     <div className="experience-description-container">
-                                        <p>{experience.description}</p>
+                                        <p>{ isEnglish?experience.descriptionEng:experience.descriptionFr}</p>
                                     </div>
                                     <div className="technology-container">
-                                        {experience.technology.map(techno => {
+                                        {experience.technology.map((techno, index) => {
                                             return (
-                                                <TechnoInfo key={techno}>
+                                                <TechnoInfo key={`${techno}-${index}`}>
                                                     <p>{techno}</p>
                                                 </TechnoInfo>
                                             );

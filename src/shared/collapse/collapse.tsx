@@ -1,6 +1,6 @@
 import { PropsWithChildren, useEffect, useRef, useState } from "react";
 import "./collapse.css";
-import arrow from "../../assets/down-arrow.png"
+import arrow from "../../../public/assets/down-arrow.webp"
 
 
 type CollapsePropsType = PropsWithChildren<{

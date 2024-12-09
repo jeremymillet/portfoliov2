@@ -1,14 +1,17 @@
 import './contact.css'
-import img from '../../assets/1708726551223.jpg'
-import quote from '../../assets/quote-icon.png'
+import img from '../../../public/assets/1708726551223.webp'
+import quote from '../../../public/assets/quote-icon.webp'
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store';
 function Contact() {
+    const isEnglish = useSelector((state: RootState) => state.isEnglish);
     return (
         <div className='contact-container'>
             <div className='contact'>
-                <h2>Available for select freelance opportunities</h2>
+                <h2>{isEnglish?"Available for select freelance opportunities":"Disponible pour certaines mission freelance"}</h2>
                 <p>
-                    Have an exciting project you need help with?
-                    Send me an email or contact me via instant message!
+                    {isEnglish ? "Have an exciting project you need help with Send me an email or contact me via instant message!" :
+                        "Vous avez un projet passionnant, vous avez besoin d'aide, envoyez-moi un e-mail"}
                 </p>
                 <a href="mailto:jeremy.millet37@gmail.com">jeremy.millet37@gmail.com</a>
                 <ul>

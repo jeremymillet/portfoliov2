@@ -1,5 +1,11 @@
 import { Dispatch, SetStateAction, useEffect, useState} from 'react';
 import './header.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState, setEnglish } from '../../store';
+import flagUk from '../../../public/assets/flag-uk.svg'
+import flagFr from '../../../public/assets/flag-fr.svg'
+import { Link } from 'react-router-dom';
+
 
 type HeaderProps = {
   setIsFixed: Dispatch<SetStateAction<boolean>>;
@@ -7,9 +13,14 @@ type HeaderProps = {
 };
 
 function Header({ setIsFixed, isFixed }: HeaderProps) {
+  const dispatch = useDispatch<AppDispatch>();
+  const isEnglish = useSelector((state: RootState) => state.isEnglish);
   const [isBurger,setIsBurger] = useState(false)
   function toogle() {
     setIsBurger(!isBurger)
+  }
+  function toggleLanguage() {
+    dispatch(setEnglish(!isEnglish))
   }
   useEffect(() => {
     const handleScroll = () => {
@@ -33,26 +44,27 @@ function Header({ setIsFixed, isFixed }: HeaderProps) {
           <nav className="burger-nav">
             <ul>
               <li>
-                <a href="/#">
-                  <span>// home</span>
-                </a>
+                <Link to="/#" >
+                  <span>{isEnglish?"// home" : "// accueil"  }</span>
+                </Link>
               </li>
               <li>
-                <a href="/#expertise">
+                <Link to="/#expertise">
                   <span>// expertise</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#work">
-                  <span>// work</span>
-                </a>
+                <Link to="/#work">
+                  <span>{isEnglish?"// work" : "// projet"  }</span>
+                </Link>
               </li>
               <li>
-                <a href="/#experience">
-                  <span>// experience</span>
-                </a>
+                <Link to="/#experience">
+                  <span>{isEnglish?"// experience" : "// expérience"  }</span>
+                </Link>
               </li>
             </ul>
+            <img onClick={toggleLanguage} className='language-status' src={isEnglish?flagFr:flagUk} alt="flag" />
           </nav>
         </div>
       </div>
@@ -66,7 +78,7 @@ function Header({ setIsFixed, isFixed }: HeaderProps) {
           <li>
             <a href="/#">
               <p>01</p>
-              <span>// home</span>
+              <span>{isEnglish?"// home" : "// accueil"  }</span>
             </a>
           </li>
           <li>
@@ -78,16 +90,17 @@ function Header({ setIsFixed, isFixed }: HeaderProps) {
           <li>
             <a href="/#work">
               <p>03</p>
-              <span>// work</span>
+              <span>{isEnglish?"// work" : "// projet"  }</span>
             </a>
           </li>
           <li>
             <a href="/#experience">
               <p>04</p>
-              <span>// experience</span>
+              <span>{isEnglish?"// experience" : "// expérience"  }</span>
             </a>
           </li>
         </ul>
+        <img onClick={toggleLanguage} className='language-status' src={isEnglish?flagFr:flagUk} alt="flag" />
       </nav>
     </header>
   );

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './card.css'
+import { Link } from 'react-router-dom';
 
 type cardPropsType = {
     title: string,
@@ -29,20 +30,22 @@ const Card: React.FC<cardPropsType> = ({ cover, title, category, id }) => {
         };
     }, []);
     return (
-        <a className='card-link' href={`project/${id}`}>
+    
+        <Link to={`/project/${id}`}>
             <div className="card" ref={cardRef}>
-            <div className="card-img-container">
-                <img src={cover} alt="" />
+                <div className="card-img-container">
+                    <img src={cover} alt="" />
+                </div>
+                <div className="card-text-container">
+                    <h3>{title}</h3>
+                    <p>{category}</p>
+                    <a className='card-link' href={`project/${id}`}>
+                        Show Project 
+                    </a>
+                </div>
             </div>
-            <div className="card-text-container">
-                <h3>{title}</h3>
-                <p>{category}</p>
-                <a className='card-link' href={`project/${id}`}>
-                    Show Project 
-                </a>
-            </div>
-        </div>
-        </a>
+        </Link>
+        
         
     )
 }

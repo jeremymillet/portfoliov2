@@ -3,41 +3,53 @@
         "id":1,
         "title":"Kasa",
         "category":"Web Development",
-        "cover":"../../src/assets/cover-kasa.png",
-        "description":"dqzsddqzuhdfoiqndoiqNOIDnqOId,qOIdnqOInfqoiNfoqNfojuqnfojquNFojuNFoqfnqoFNqoNFoqnfosnfoQZNOFNFoqNFOJQZNFoqnOFnqOJFnqoJNFojqFNOJnfoqNFJOQFN ojfnzqONfoqfnozqN",
-        "img":[],
+        "cover":"assets/cover-kasa.webp",
+        "descriptionFr":"Découvrez la première version de Kasa, un site qui propose des logements offerts par des particuliers. On peut y retrouver des informations telles que les photos des appartements,leurs équipements et leurs descriptions",
+        "descriptionEng":"Discover the first version of Kasa, a site that offers private homes. You can find information such as photos of the apartments, their equipment and descriptions",
+        "img":["../assets/cover-kasa.webp","../assets/kasa-screen-1.webp","../assets/kasa-screen-2.webp","../assets/kasa-screen-3.webp","../assets/kasa-screen-4.webp"],
         "technology":"React,Typescript,SCSS",
-        "link":"https://kasa-ts.onrender.com"
-        
+        "link":"https://kasa-ts.onrender.com",
+        "githubFront":"https://github.com/jeremymillet/Kasa-TS",
+        "githubBack":""
     },
-    {   
+     {   
         "id":2,
-        "title":"Les petits plats",
+        "title":"WealthHealth",
         "category":"Web Development",
-        "description":"",
-        "technology":"",
-        "cover":"../../src/assets/cover-les-petits-plats.png",
-        "img":[]
-        
+        "descriptionFr":"Wealth Health est un site proposé pour les RH. Il permet de visualiser les employés avec leurs diverses informations. On a la possibilité une fois connecté en tant que RH de créer, modifier et supprimer des employés",
+        "descriptionEng":"Wealth Health is a proposed HR site that allows you to visualize employees with their various information. Once logged in as HR, you have the ability to create, edit and delete employees",
+        "technology":"React,Node.js,CSS,TypeScript",
+        "cover":"assets/cover-wealthHealth.webp",
+        "img":["../assets/cover-wealthHealth.webp","../assets/wealth-health-screen1.webp","../assets/wealth-health-screen2.webp","../assets/wealth-health-screen3.webp","../assets/wealth-health-screen4.webp"],
+        "link":"https://wealthhealth-remaster.onrender.com/",
+        "githubFront":"https://github.com/jeremymillet/WealthHealth-remaster",
+        "githubBack":"https://github.com/jeremymillet/WealthHealth-remaster-api"
     },
     {   
         "id":3,
         "title":"Sportsee",
         "category":"Web Development",
-        "description":"",
-        "technology":"",
-        "cover":"../../src/assets/cover-sportsee.png",
-        "img":["",""]
-        
+        "descriptionFr":"Sportsee est un Dashboard qui permet de suivre son activité physique et ses objectifs grâce à différents graphiques",
+        "descriptionEng":"Sportsee is a Dashboard that allows you to track your physical activity and goals through different graphs",
+        "technology":"React,TypeScript,Css",
+        "cover":"assets/cover-sportsee.webp",
+        "img":["../assets/sportsee-screen1.webp","../assets/sportsee-screen2.webp","../assets/sportsee-screen3.webp"],
+        "link":"https://sportsee-exgz.onrender.com/?id=12",
+        "githubFront":"https://github.com/jeremymillet/sportsee",
+        "githubBack":""
     },
     {   
         "id":4,
-        "title":"WealthHealth",
+        "title":"Les petits plats",
         "category":"Web Development",
-        "description":"",
-        "technology":"",
-        "cover":"../../src/assets/cover-wealthHealth.png",
-        "img":[]
+        "descriptionFr":"Les petits plats est un site de recettes. Il vous permet de trouver des recettes adaptées aux ingrédients que vous avez chez vous",
+        "descriptionEng":"Les petits plats is a recipe site. It allows you to find recipes adapted to the ingredients that you have at home",
+        "technology":"HTML, CSS, JavaScript",
+        "cover":"assets/cover-les-petits-plats.webp",
+        "img":["../assets/cover-les-petits-plats.webp","../assets/les-petits-plats-screen-1.webp","../assets/les-petits-plats-screen-2.webp","../assets/les-petits-plats-screen-3.webp"],
+        "link":"https://les-petits-plats-criq.onrender.com",
+        "githubFront":"https://github.com/jeremymillet/Les-petits-plats",
+        "githubBack":""
         
     }
 ]

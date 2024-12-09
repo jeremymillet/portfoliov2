@@ -64,6 +64,12 @@ header.fixed nav ul li span,header.fixed nav ul li p{
 .nav ul li p {
     font-size: 10px;
 }
+.language-status{
+    padding-top: 20px;
+    margin-left: 40px;
+    cursor: pointer;
+    width: 25px;
+}
 .burger {
     display: none;
 }
