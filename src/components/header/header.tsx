@@ -68,11 +68,13 @@ function Header({ setIsFixed, isFixed }: HeaderProps) {
           </nav>
         </div>
       </div>
-      <div className="logo">
+      <Link to="/#" >
+        <div className="logo">
         <p>JérémyMillet</p>
         <span>.</span>
         <span className="logo-purple">_</span>
       </div>
+      </Link>
       <nav className="nav">
         <ul>
           <li>
